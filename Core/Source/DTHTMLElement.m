@@ -33,7 +33,11 @@
 #import <CoreText/CoreText.h>
 
 #if TARGET_OS_IPHONE
+
+#import <UIKit/UIKit.h>
+
 #import "UIFont+DTCoreText.h"
+
 #endif
 
 @interface DTHTMLElement ()
