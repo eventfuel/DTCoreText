@@ -16,7 +16,7 @@ let package = Package(
             targets: ["DTCoreText"]),
     ],
     dependencies: [
-        .package(url: "https://github.com/nostradani/DTFoundation.git", from: "1.7.15"),
+        .package(url: "https://github.com/eventfuel/DTFoundation.git", .revision("a2db0ef61d056a06e4a25d1a9022335d60c25a2a")),
     ],
     targets: [
         .target(

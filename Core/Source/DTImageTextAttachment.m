@@ -14,9 +14,9 @@
 #import "NSString+HTML.h"
 #import "DTImage+HTML.h"
 
-#if TARGET_OS_IPHONE
-	#import <DTFoundation/DTAnimatedGIF.h>
-#endif
+//#if TARGET_OS_IPHONE
+//	#import <DTFoundation/DTAnimatedGIF.h>
+//#endif
 
 #import <DTFoundation/DTBase64Coding.h>
 
@@ -224,15 +224,15 @@ static NSCache *imageCache = nil;
 			// only local files we can directly load without punishment
 			if ([contentURL isFileURL])
 			{
-#if TARGET_OS_IPHONE
-				NSString *ext = [[[contentURL lastPathComponent] pathExtension] lowercaseString];
-				
-				if ([ext isEqualToString:@"gif"])
-				{
-					image = DTAnimatedGIFFromFile([contentURL path]);
-				}
-				else
-#endif
+//#if TARGET_OS_IPHONE
+//				NSString *ext = [[[contentURL lastPathComponent] pathExtension] lowercaseString];
+//				
+//				if ([ext isEqualToString:@"gif"])
+//				{
+//					image = DTAnimatedGIFFromFile([contentURL path]);
+//				}
+//				else
+//#endif
 				{
 					image = [[DTImage alloc] initWithContentsOfFile:[contentURL path]];
 				}
